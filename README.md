@@ -34,7 +34,7 @@ With my configuration the solution was: "VotingEnsemble".
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
 
-With HyperDrive I limit the best possible solution by the model and the random search for parameter values. With my configuration of HyperDrive and the Logistic regression classifier, AutoML was able to find a better solution with the greater degree of freedom. The "accuracy" of the AutoML model was better with a value of 0.9179 than the HyperDrice solution with an accuracy of 0.843.
+With HyperDrive I limit the best possible solution by the model and the random search for parameter values. With my configuration of HyperDrive and the Logistic regression classifier, AutoML was able to find a better solution with the greater degree of freedom. The "accuracy" of the AutoML model was better with a value of 0.9179 than the HyperDrice solution with an accuracy of 0.913.
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
