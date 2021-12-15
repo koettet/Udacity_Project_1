@@ -39,6 +39,8 @@ With HyperDrive I limit the best possible solution by the model and the random s
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
+The configuration of HyperDrive and AutoML could be optimized by someone with more experience. This way possible better solutions are not avoided from the beginning and other non-optimal solutions are avoided to be more efficient with  ressources. For example the "XGBoostCLassifier" seems to be very dominant to solve this problem with the highest accuracy. It might be worth it to optimize that model annd block alternatives completly.
+
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
 **Image of cluster marked for deletion**
