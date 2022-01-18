@@ -31,12 +31,21 @@ The early stopping policy is usefull to be efficient with ressources. The bandit
 For AutoML I only define that I want to train  a classification model. AutoML will then try different models and optimize the hyperparameters of these models to find an optimal model  based on the metric I pick.
 With my configuration the solution was: "VotingEnsemble".
 
+The following hyperparameters were used:
+experiment_timeout_minutes=30   --> maximum time to look for an optimal model. BEst model after 30 minutes will be picked as best solution.
+task='classification'           --> model type
+primary_metric='accuracy'       --> metric used to evaluate the model performance
+training_data=x                 --> dataframe used to train the model on
+label_column_name='y'           --> column name wich contains the possible outcomes for the classification
+n_cross_validations=3           --> nnumber of cross validations
+
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
 
-With HyperDrive I limit the best possible solution by the model and the random search for parameter values. However, with my configuration of HyperDrive and the Logistic regression classifier, AutoML was only able to find a slightly better solution. The "accuracy" of the AutoML model was with a value of 0.918 mostly as good as the HyperDrice solution with an accuracy of 0. I would conclude that in this case the LogisticRegression model was a good choice.
+With HyperDrive I limit the best possible solution by the model and the random search for parameter values. However, with my configuration of HyperDrive and the Logistic regression classifier, AutoML was only able to find a slightly better solution. The "accuracy" of the AutoML model was with a value of 0.918 mostly as good as the HyperDrive solution with an accuracy of 0.921 I would conclude that in this case the LogisticRegression model was a good choice.
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
-The configuration of HyperDrive and AutoML could be optimized by someone with more experience. This way, possible better solutions are not avoided from the beginning and other non-optimal solutions are avoided to be more efficient with ressources. For example the "XGBoostCLassifier", "VotingEnsemble" and "StackEnsemble" seem to be very potent to solve this problem with the highest accuracy. It might be worth it to optimize these models and block alternatives completly.
+The configuration of HyperDrive and AutoML could be optimized by someone with more experience. This way, possible better solutions are not avoided from the beginning and other non-optimal solutions are avoided to be more efficient with ressources.
+For example the "XGBoostCLassifier", "VotingEnsemble" and "StackEnsemble" seem to be very potent to solve this problem with the highest accuracy. It might be worth it to optimize these models and block alternatives completly, so we spend more time optimizing the most promesing models instead of also consedering models that don't seem to have the same potential for this problem.
