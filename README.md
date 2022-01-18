@@ -42,7 +42,7 @@ n_cross_validations=3           --> nnumber of cross validations
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
 
-With HyperDrive I limit the best possible solution by the model and the random search for parameter values. However, with my configuration of HyperDrive and the Logistic regression classifier, AutoML was only able to find a slightly better solution. The "accuracy" of the AutoML model was with a value of 0.918 mostly as good as the HyperDrive solution with an accuracy of 0.921 I would conclude that in this case the LogisticRegression model was a good choice.
+With HyperDrive I limit the best possible solution by the model and the random search for parameter values. However, with my configuration of HyperDrive and the Logistic regression classifier, AutoML was only able to find a slightly better solution. The "accuracy" of the AutoML model was with a value of 0.913 mostly as good as the HyperDrive solution with an accuracy of 0.914 I would conclude that in this case the LogisticRegression model was a good choice.
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
